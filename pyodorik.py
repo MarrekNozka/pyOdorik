@@ -6,7 +6,7 @@
 # Licence: GNU/GPL 
 # Úloha:   Jednoduché uživatelské rozhraní pro odorik.
 ############################################################################
-#from __future__ import unicode_literals
+from __future__ import unicode_literals
 
 import sys, os, httplib, urllib
 import simplejson as json
@@ -110,7 +110,7 @@ elif sys.argv[1]=='call':
         caller = sys.argv[2]
         recipient = sys.argv[3]
     elif len(sys.argv) == 3:
-        caller = sys.argv[2]
+        recipient = sys.argv[2]
 
         try:
             conf=open( conffile, 'r' )
@@ -124,17 +124,17 @@ elif sys.argv[1]=='call':
             sys.exit(20)
         conf.close()
         try:
-            recipient=default[os.getenv('HOST')]
+            caller=default[os.getenv('HOST')]
         except:
-            recipient=default['default']
+            caller=default['default']
     else:
         stderr.write('Zadejí číslo odkud voláš a kam\n\n')
         sys.exit(50)
 
     print "Volám z čísla "+caller
     print "     na číslo "+recipient
-    print getFromAPI("POST" , '/callback', caller=caller, recipient=recipient)
     sys.exit(0) 
+    print getFromAPI("POST" , '/callback', caller=caller, recipient=recipient)
 
 
 sys.exit(0)
