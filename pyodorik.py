@@ -85,11 +85,11 @@ def getFromAPI(method,URL,**kwargs):
         response = conn.getresponse()
         print response.status, response.reason
         data = response.read()
-        print data
         conn.close()
+        return data
     elif method=='GET':
         response=urllib.urlopen("https://www.odorik.cz"+root+URL+"?"+params)
-        print response.read()
+        return response.read()
 
 
 ##############################################################################
@@ -97,10 +97,13 @@ if len(sys.argv) == 1 or sys.argv[1]=='help':
     printHelp()
     sys.exit(0)
 elif sys.argv[1]=='list':
-    getFromAPI("GET" , '/speed_dials.json')
+    contacts = getFromAPI("GET" , '/speed_dials.json')
+    contacts = json.loads(contacts)
+    for k in contacts:
+        print k['shortcut'], k['name']
     sys.exit(0)
 elif sys.argv[1]=='credit':
-    getFromAPI("GET" , '/balance')
+    print getFromAPI("GET" , '/balance')
     sys.exit(0) 
 elif sys.argv[1]=='call':
     if len(sys.argv) == 4:
@@ -130,7 +133,7 @@ elif sys.argv[1]=='call':
 
     print "Volám z čísla "+caller
     print "     na číslo "+recipient
-    getFromAPI("POST" , '/callback', caller=caller, recipient=recipient)
+    print getFromAPI("POST" , '/callback', caller=caller, recipient=recipient)
     sys.exit(0) 
 
 
