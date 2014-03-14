@@ -1,0 +1,13 @@
+
+{
+    "auth": {
+        "user": "jmeno"
+        "password": "heslo",
+    },
+    "default": {
+        "_comment": "výchozí telefoní číslo pro jednotlivé hostitele", 
+        "default": "3",
+        "impala": "3",
+        "masina": "1"
+    }
+}
