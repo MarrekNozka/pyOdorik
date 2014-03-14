@@ -75,22 +75,22 @@ def getFromAPI(method,URL,**kwargs):
     auth=getAuth()
     auth.update(kwargs)
     params = urllib.urlencode(auth)
+    try:
+        conn=httplib.HTTPSConnection("www.odorik.cz")
+    except:
+        stderr.write("chyba sítě.\n\n")
+        sys.exit(30)
     if method=='POST':    
-        try:
-            conn=httplib.HTTPSConnection("www.odorik.cz")
-        except:
-            stderr.write("chyba sítě.\n\n")
-            sys.exit(30)
         conn.request('POST',root+URL,params)
-        response = conn.getresponse()
-        print response.status, response.reason
-        data = response.read()
-        conn.close()
-        return data
     elif method=='GET':
-        response=urllib.urlopen("https://www.odorik.cz"+root+URL+"?"+params)
-        return response.read()
-
+        conn.request('GET',root+URL+'?'+params)
+    else :
+        return False
+    response = conn.getresponse()
+    print response.status, response.reason
+    data = response.read()
+    conn.close()
+    return data
 
 ##############################################################################
 if len(sys.argv) == 1 or sys.argv[1]=='help':
@@ -103,7 +103,7 @@ elif sys.argv[1]=='list':
         print k['shortcut'], k['name']
     sys.exit(0)
 elif sys.argv[1]=='credit':
-    print getFromAPI("GET" , '/balance')
+    print 'Kredit: '+getFromAPI("GET" , '/balance') + " korun českých."
     sys.exit(0) 
 elif sys.argv[1]=='call':
     if len(sys.argv) == 4:
