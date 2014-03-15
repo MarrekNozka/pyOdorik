@@ -1,8 +1,7 @@
-
 {
     "auth": {
-        "user": "jmeno"
-        "password": "heslo",
+        "user": "jmeno",
+        "password": "heslo"
     },
     "default": {
         "_comment": "výchozí telefoní číslo pro jednotlivé hostitele", 
