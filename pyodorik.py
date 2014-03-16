@@ -133,8 +133,8 @@ elif sys.argv[1]=='call':
 
     print "Volám z čísla "+caller
     print "     na číslo "+recipient
-    sys.exit(0) 
     print getFromAPI("POST" , '/callback', caller=caller, recipient=recipient)
+    sys.exit(0) 
 
 
 sys.exit(0)
