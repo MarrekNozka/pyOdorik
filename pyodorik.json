@@ -5,7 +5,7 @@
     },
     "default": {
         "_comment": "výchozí telefoní číslo pro jednotlivé hostitele", 
-        "default": "3",
+        "default": "88",
         "impala": "3",
         "masina": "1"
     }
