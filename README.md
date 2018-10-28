@@ -11,7 +11,7 @@ Use aplication for [Odorik][] VoIP.
 Konfigurace
 --------------
 
-Konfigurace je uložene v ~/.config/pyodorik.json 
+Konfigurace je uložene v `~/.config/pyodorik.json`
 
 Seznam kontaktů
 ----------------
@@ -26,14 +26,14 @@ Kredit
 Zpětné volání
 --------------
 
-    $ pyodorik call 756123658
-    $ pyodorik call 123456789 756123658
+    $ pyodorik call 756 123 658
+    $ pyodorik call 123 456 789 - 756 123 658
 
-Pokud je zadáno jen jednočíslo na bere se číslo telefonu z kterého 
+Pokud je zadáno jen jedno číslo bere se číslo telefonu z kterého 
 chci volat z konfiguračního souboru.
 
-V konfiguračním souboru si pro každého hostitele můžu nastavit jiné telefoní 
-číslo.
+V konfiguračním souboru si pro každého hostitele můžu nastavit jiné výchozí
+telefonní číslo.
 
 
 Help
