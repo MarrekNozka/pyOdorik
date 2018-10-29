@@ -40,7 +40,7 @@ Zpětné volání
 Pokud je zadáno jen jedno číslo, bere se číslo telefonu z kterého
 chci volat z konfiguračního souboru. Na mezerách nezáleží. Při zadání dvou
 čísel je oddělovačem pomlčka. Dvě telefonní čísla se zadávají v pořadí
-<odkud> - <kam>
+`<odkud>` - `<kam>`
 
 V konfiguračním souboru si pro každého hostitele můžu nastavit jiné výchozí
 telefonní číslo.
