@@ -3,11 +3,17 @@ pyOdorik
 
 [Odorik]: http://www.odorik.cz
 
+* Sources:                https://github.com/MarrekNozka/pyOdorik
+* Bug reports and issues: https://github.com/MarrekNozka/pyOdorik/issues
+
+Use aplication for [Odorik][] VoIP.       
 Uživatelská aplikace pro [Odorik][] VoIP.
 
-Use aplication for [Odorik][] VoIP.
 
+Aplikace používá [Odorik API](https://www.odorik.cz/w/api).
 Konfigurace je uložena v [~/.config/pyodorik.ini](pyodorik.ini).
+
+
 
 Seznam kontaktů
 ----------------

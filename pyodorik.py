@@ -96,6 +96,9 @@ https://github.com/MarrekNozka/pyOdorik/blob/master/pyodorik.ini
         print("""pyOdorik
 =====================
 
+Sources:                https://github.com/MarrekNozka/pyOdorik
+Bug reports and issues: https://github.com/MarrekNozka/pyOdorik/issues
+
 Konfigurace je uložena v ~/.config/pyodorik.ini
 
 Seznam kontaktů
