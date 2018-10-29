@@ -93,67 +93,11 @@ https://github.com/MarrekNozka/pyOdorik/blob/master/pyodorik.ini
             self.line = None
 
     def printHelp():
-        print("""pyOdorik
+        print("""
+  pyOdorik
 =====================
-
-Sources:                https://github.com/MarrekNozka/pyOdorik
-Bug reports and issues: https://github.com/MarrekNozka/pyOdorik/issues
-
-Konfigurace je uložena v ~/.config/pyodorik.ini
-
-Seznam kontaktů
-----------------
-
-$ pyodorik list
-$ pyodoril search karel
-
-
-Kredit
--------
-
-$ pyodorik
-$ pyodorik credit
-
-
-Zpětné volání
---------------
-
-$ pyodorik 756 123 658
-$ pyodorik 123 456789 - 756123456
-
-$ pyodorik tonda
-
-Pokud je zadáno jen jedno číslo, bere se číslo telefonu z kterého
-chci volat z konfiguračního souboru. Na mezerách nezáleží. Při zadání dvou
-čísel je oddělovačem pomlčka. Dvě telefoní čísla se zadávají v pořadí
-<odkud> - <kam>
-
-V konfiguračním souboru si pro každého hostitele můžu nastavit jiné výchozí
-telefonní číslo.
-
-Pokud není uvedeno telefonní číslo, začne se vyhledávat řetězec v kontaktech.
-Hledání probíhá bez diakritiky.
-
-
-Výpis a volba linky
---------------
-
-$ pyodolik lines
-
-Volba linky se provádí pojmenování příkazu, kterým je program volán a sekcí
-[lines] v konfiguračním souboru.
-
-$ cd ~/bin
-~/bin $ ln -s pyodorik.py pyodolik
-~/bin $ ln -s pyodorik.py pyodolik.home
-~/bin $ ln -s pyodorik.py pyodolik.adam
-~/bin $ ln -s pyodorik.py pyodolik.eva
-
-Help
--------
-
-$ pyodorik help
-
+Help, usage and sources: https://github.com/MarrekNozka/pyOdorik
+Bug reports and issues:  https://github.com/MarrekNozka/pyOdorik/issues
 """)
 
     def getFromAPI(self, method, URL, **kwargs):
