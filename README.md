@@ -33,8 +33,8 @@ Zpětné volání
 --------------
 
     $ pyodorik 756 123 658
-    $ pyodorik tonda
     $ pyodorik 123 456789 - 756123456
+    $ pyodorik tonda
 
 
 Pokud je zadáno jen jedno číslo, bere se číslo telefonu z kterého
@@ -43,11 +43,15 @@ chci volat z konfiguračního souboru. Na mezerách nezáleží. Při zadání d
 `<odkud>` - `<kam>`
 
 V konfiguračním souboru si pro každého hostitele můžu nastavit jiné výchozí
-telefonní číslo.
+telefonní číslo. Hostitel se určuje voláním příkazu `hostname`. (Tato funkce
+je zde proto, že si zrcadlím konfiguraci na více počítačů a chci, aby se to
+například v práci chovalo jinak než doma.)
 
 Pokud není uvedeno telefonní číslo, začne se vyhledávat řetězec v kontaktech.
 Hledání probíhá bez diakritiky.
 
+    $ pyodorik tonda
+    $ pyodorik.home reditel
 
 Výpis a volba linky
 --------------
