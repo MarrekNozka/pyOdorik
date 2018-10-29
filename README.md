@@ -52,6 +52,7 @@ Hledání probíhá bez diakritiky.
 
     $ pyodorik tonda
     $ pyodorik.home reditel
+    $ pyodorik 'adam|eva'
 
 Výpis a volba linky
 --------------
