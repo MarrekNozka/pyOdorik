@@ -6,7 +6,7 @@ pyOdorik
 * Sources:                https://github.com/MarrekNozka/pyOdorik
 * Bug reports and issues: https://github.com/MarrekNozka/pyOdorik/issues
 
-Use aplication for [Odorik][] VoIP.       
+User aplication for [Odorik][] VoIP.       
 Uživatelská aplikace pro [Odorik][] VoIP.
 
 
