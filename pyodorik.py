@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf8 -*-
 # Soubor:  pyodorik.py
 # Datum:   14.03.2014 11:48
 # Autor:   Marek Nožka, marek <@t> tlapicka <d.t> net
@@ -171,7 +170,7 @@ Bug reports and issues:  https://github.com/MarrekNozka/pyOdorik/issues
             print('    ', calllist[0]['shortcut'],
                   calllist[0]['name'], calllist[0]['number'])
             choice = input(' pokračujeme? [A/n]> ')
-            if choice == '' or choice.upper == 'A' or choice.upper == 'Y':
+            if choice == '' or choice.upper() == 'A' or choice.upper() == 'Y':
                 return calllist[0]['shortcut']
             else:
                 return 0
